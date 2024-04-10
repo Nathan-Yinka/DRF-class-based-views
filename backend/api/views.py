@@ -10,7 +10,8 @@ from product.serializers import ProductSerializer
 @api_view(["GET","POST"])
 def api_home(request,*args, **kwargs):
     """
-    DRF API View"""
+    DRF API View
+    """
     serializer ={}
     products = Product.objects.all().order_by("?").first()
     if products:
